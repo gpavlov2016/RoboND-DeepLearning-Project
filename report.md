@@ -1,6 +1,6 @@
 
 ### Network Architecture
-![Network Architecture](/architecture.jpeg)
+![Network Architecture](/architecture.jpg)  
 The network has three downsampling encoders implemented using separable convolution with a stride of 2x2 with batch normalization between the layers. The fully connected layer is one by one convolution with deminsional reduction to 64 filters instead of 128 for the input layer. After the one by one convolutions there are 3 upsampling decoders implemented using bilinear upsampling with skip connections from the encoders between them and additional one by one convolutions to reduce depth after concatenation and introduce additional non-linearities.
 
 ```
